@@ -2,6 +2,7 @@ import { Text, View, TouchableOpacity, FlatList, Image } from 'react-native';
 import React from 'react';
 import tw from 'tailwind-react-native-classnames';
 import { Icon } from 'react-native-elements';
+import { useNavigation } from '@react-navigation/native';
 
 
 const data = [
@@ -22,6 +23,7 @@ const data = [
 
 
 const NavOptions = () => {
+  const navigation = useNavigation();
   return (
     <FlatList
       data={data}
