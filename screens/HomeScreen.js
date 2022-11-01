@@ -16,6 +16,12 @@ const HomeScreen = () => {
             uri: "https://mma.prnewswire.com/media/1671139/Uber_Logo.jpg?w=400",
           }}
         />
+        <GooglePlacesAutocomplete
+
+          placeholder='Where from?'
+          nearbyPlacesAPI='GooglePlacesSearch'
+          debounce={400}
+        />
         <NavOptions />
       </View>
     </SafeAreaView>
