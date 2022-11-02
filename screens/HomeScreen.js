@@ -4,10 +4,14 @@ import tw from 'tailwind-react-native-classnames';
 import NavOptions from '../components/NavOptions';
 import { GooglePlacesAutocomplete } from 'react-native-google-places-autocomplete';
 import { GOOGLE_MAPS_APIKEY } from "@env";
+import { useDispatch } from 'react-redux';
+import { selectDestination, setOrigin } from '../slices/navSlice';
 
 
 
 const HomeScreen = () => {
+  const dispach = useDispatch();
+
   return (
     <SafeAreaView style={tw`bg-white h-full`}>
       <View>
@@ -30,10 +34,15 @@ const HomeScreen = () => {
 
           }}
           onPress={(data, details = null) => {
-            console.log(data);
-            console.log(details);
+            dispach(setOrigin({
+              location: details.geometry.location, //check out redux docs for deets
+              description: data.description
+            }))
+
+            dispach(setDestination(null))
           }}
           fetchDetails={true}
+          returnKeyType={"search"}
           enablePoweredByContainer={false}
           minLength={2}
 
