@@ -22,16 +22,17 @@ const Map = () => {
         <Marker
           coordinate={{
             latitude: origin.location.lat,
-            longitude: origin.longitude.lng,
+            longitude: origin.location.lng,
           }}
+          title="Origin"
+          description={origin.description}
+          identifier="origin"
         />
       )}
     </MapView>
-
-
   );
 };
 
-export default Map
+export default Map;
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({});
