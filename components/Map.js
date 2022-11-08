@@ -27,6 +27,7 @@ const Map = () => {
 
   return (
     <MapView
+      ref={mapRef}
       style={tw`flex-1`}
       mapType="mutedStandard"
       initialRegion={{
