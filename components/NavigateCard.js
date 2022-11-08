@@ -3,8 +3,12 @@ import React from 'react'
 import tw from 'tailwind-react-native-classnames';
 import { GooglePlacesAutocomplete } from 'react-native-google-places-autocomplete';
 import { GOOGLE_MAPS_APIKEY } from "@env";
+import { setDestination } from '../slices/navSlice';
 
 const NavigateCard = () => {
+  const dispach = useDispach();
+  const navigation = useNavigation();
+
   return (
 
     <SafeAreaView style={tw`bg-white flex-1`}>
@@ -17,6 +21,18 @@ const NavigateCard = () => {
             styles={toInputBoxStyles}
             fetchDetails={true}
             returnKeyType={"search"}
+            minLength={2}
+            onPress={(data, details = null) => {
+              dispach(setDestination({
+                location: details.geometry.location,
+                description: data.description,
+
+              })
+              );
+
+              navigation.navigate('RideOptionsCard')
+
+            }}
             enablePoweredByContainer={false}
             nearbyPlacesAPI='GooglePlacesSearch'
             debounce={400}
