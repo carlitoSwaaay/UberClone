@@ -31,4 +31,13 @@ const toInputBoxStyles = StyleSheet.create({
     paddingTop: 20,
     flex: 0,
   },
+  textInput: {
+    backgroundColor: "#DDDDDF",
+    borderRadius: 0,
+    fontSize: 18,
+  },
+  textInputContainer: {
+    paddingHorizontal: 20,
+    paddingBottom: 0,
+  },
 });
