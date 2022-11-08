@@ -2,11 +2,12 @@ import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import MapView, { Marker } from 'react-native-maps';
 import tw from 'tailwind-react-native-classnames';
-import { selectOrigin } from '../slices/navSlice';
+import { selectOrigin, selectDestination } from '../slices/navSlice';
 import { useSelector } from 'react-redux';
 
 const Map = () => {
   const origin = useSelector(selectOrigin);
+  const destination = useSelector(selectDestination);
   return (
     <MapView
       style={tw`flex-1`}
