@@ -4,9 +4,11 @@ import tw from 'tailwind-react-native-classnames';
 import { GooglePlacesAutocomplete } from 'react-native-google-places-autocomplete';
 import { GOOGLE_MAPS_APIKEY } from "@env";
 import { setDestination } from '../slices/navSlice';
+import { useDispatch } from 'react-redux';
+import { useNavigation } from '@react-navigation/native';
 
 const NavigateCard = () => {
-  const dispach = useDispach();
+  const dispach = useDispatch();
   const navigation = useNavigation();
 
   return (
