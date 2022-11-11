@@ -49,7 +49,7 @@ const NavigateCard = () => {
         <NavFavorites />
       </View>
       <View>
-        <TouchableOpacity>
+        <TouchableOpacity style={tw`flex-row bg-black w-24 px-4 py-3 rounded-full`}>
           <Icon name="car" type="font-awesome" color="white" size={16} />
           <Text style={tw`text-white text-center`}>Rides</Text>
         </TouchableOpacity>
