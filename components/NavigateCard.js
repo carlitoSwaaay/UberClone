@@ -48,16 +48,27 @@ const NavigateCard = () => {
         </View>
         <NavFavorites />
       </View>
-      <View>
-        <TouchableOpacity style={tw`flex-row bg-black w-24 px-4 py-3 rounded-full`}>
+      <View style={tw`flex-row bg-white justify-evenly py-2 mt-auto border-t border-gray-100`}>
+        <TouchableOpacity
+          style={tw`flex flex-row bg-black w-24 px-4 py-3 rounded-full`}
+        >
           <Icon name="car" type="font-awesome" color="white" size={16} />
           <Text style={tw`text-white text-center`}>Rides</Text>
         </TouchableOpacity>
-        <TouchableOpacity></TouchableOpacity>
+
+        <TouchableOpacity
+          style={tw`flex flex-row justify-between w-24 px-4 py-3 rounded-full`}
+        >
+          <Icon
+            name="fast-food-outline"
+            type="ionicon"
+            color="black"
+            size={16}
+          />
+          <Text style={tw`text-center`}>Eats</Text>
+        </TouchableOpacity>
       </View>
     </SafeAreaView> 
-
-
   );
 };
 
