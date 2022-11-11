@@ -10,9 +10,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 const MapScreen = () => {
   const Stack = createStackNavigator();
   return (
-    <KeyboardAvoidingView
-      behavior={Platform.OS === "ios" ? "padding" : "height"}
-    >
+
     <View>
       <View style={tw`h-1/2`}>
         <Map />
@@ -37,7 +35,7 @@ const MapScreen = () => {
         </Stack.Navigator>
       </View>
     </View>
-    </KeyboardAvoidingView>
+
   );
 };
 
