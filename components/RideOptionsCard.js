@@ -9,7 +9,7 @@ const RideOptionsCard = () => {
   return (
     <SafeAreaView style={tw`bg-white flex-grow`}>
       <View>
-        <TouchableOpacity onPress={() => navigation.navigate("NavigationCard")}
+        <TouchableOpacity onPress={() => navigation.navigate("NavigateCard")}
           style={tw`absolute top-3 left-5 p-3 rounded-full`}>
           <Icon name="chevron-left" type="fontawesome" />
         </TouchableOpacity>
