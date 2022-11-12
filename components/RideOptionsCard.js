@@ -1,14 +1,18 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { SafeAreaView, StyleSheet, Text, View } from 'react-native'
 import React from 'react'
+import tw from 'tailwind-react-native-classnames';
 
 const RideOptionsCard = () => {
   return (
-    <View>
-      <Text>ride card</Text>
-    </View>
+    <SafeAreaView style={tw`bg-white flex-grow`}>
+      <Text
+        style={tw`text-center py-5 text-xl`}
+      >Select a Ride
+      </Text>
+    </SafeAreaView>
   )
 }
 
-export default RideOptionsCard
+export default RideOptionsCard;
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({});
