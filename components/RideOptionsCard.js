@@ -44,8 +44,9 @@ const RideOptionsCard = () => {
       </View>
 
       <FlatList
-        data={data} keyExtractor={(item) => item.id}
-        renderItem={({ item: { id, title, multiplier, image } }) => (
+        data={data}
+        keyExtractor={(item) => item.id}
+        renderItem={({ item: { id, title, multiplier, image }, item }) => (
           <TouchableOpacity>
             <Image
               style={{
