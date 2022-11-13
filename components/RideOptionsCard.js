@@ -53,7 +53,7 @@ const RideOptionsCard = () => {
                 height: 100,
                 resizeMode: "contain",
               }}
-              source={{ uri: Image }}
+              source={{ uri: image }}
             />
           </TouchableOpacity>
         )}
