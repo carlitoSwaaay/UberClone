@@ -10,7 +10,7 @@ const data = [
     id: "Uber-X-123",
     title: "UberX",
     multiplier: 1,
-    image: "https://links.papreact.com/3pn",
+    image: "https://links.papareact.com/3pn",
   },
   {
     id: "Uber-XL-456",

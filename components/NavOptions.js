@@ -11,13 +11,13 @@ const data = [
   {
     id: "123",
     title: "Get a Ride",
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcfkvzOKeeO_wELzeG83cViDABdyc2LNHQvc7vZogE0fytt4s5-Ytxxkoim3xaS7A1-Sg&usqp=CAU",
+    image: "https://links.papareact.com/3pn",
     screen: "MapScreen",
   },
   {
     id: "456",
     title: "Order Food",
-    image: "https://www.iconbolt.com/preview/twitter/font-awesome-solid/utensils.svg",
+    image: "https://links.papareact.com/28w",
     screen: "EatsScreen",
   },
 
