@@ -9,19 +9,19 @@ const data = [
     id: "Uber-X-123",
     title: "UberX",
     multiplier: 1,
-    image: "",
+    image: "https://links.papreact.com/3pn",
   },
   {
     id: "Uber-XL-456",
     title: "UberXL",
     multiplier: 1.2,
-    image: "",
+    image: "https://links.papareact.com/5w8",
   },
   {
     id: "Uber-LUX-789",
     title: "Uber LUX",
     multiplier: 1.75,
-    image: "",
+    image: "https://links.papareact.com/7pf",
   },
 ];
 
