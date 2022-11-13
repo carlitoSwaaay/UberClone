@@ -56,7 +56,7 @@ const RideOptionsCard = () => {
               }}
               source={{ uri: image }}
             />
-            <View style={tw`-ml=6`}>
+            <View style={tw`-ml-6`}>
               <Text style={tw`text-xl font-semibold`}>{title}</Text>
               <Text>Travel time...</Text>
             </View>
