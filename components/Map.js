@@ -20,7 +20,7 @@ const Map = () => {
 
   //   //Zoom & fit to markers
     mapRef.current.fitToSuppliedMarkers(['origin', 'destination'], {
-      edgePadding: { top: 40, right: 40, bottom: 40, left: 40 },
+      edgePadding: { top: 30, right: 30, bottom: 30, left: 30 },
     });
 
   }, [origin, destination]);
