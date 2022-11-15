@@ -33,10 +33,12 @@ const Map = () => {
       fetch(`https://maps.googleapis.com/maps/api/distancematrix/json?units=imperial&origins=${origin.description}&destination=${destination.description}&key=${GOOGLE_MAPS_APIKEY}`)
         .then((res) => res.json())
         .then(data => {
-          dispatchEvent(setTravelTimeInformation(data.rows[0].elements[0]));
+          dispatch(setTravelTimeInformation(data.rows[0].elements[0]))
         });
     };
-  }, [origin, destination, GOOGLE_MAPS_APIKEY])
+
+    getTravelTime();
+  }, [origin, destination, GOOGLE_MAPS_APIKEY]);
 
   return (
     <MapView
