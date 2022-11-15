@@ -1,5 +1,5 @@
 import { FlatList, SafeAreaView, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
-import React from 'react'
+import React, { useState } from 'react'
 import tw from 'tailwind-react-native-classnames';
 import { Icon, Image } from 'react-native-elements';
 import { useNavigation } from '@react-navigation/native';
@@ -28,6 +28,8 @@ const data = [
 
 const RideOptionsCard = () => {
   const navigation = useNavigation();
+  const [selected, setSelected] = useState(null);
+
   return (
     <SafeAreaView style={tw`bg-white flex-grow`}>
       <View>
@@ -47,7 +49,9 @@ const RideOptionsCard = () => {
         data={data}
         keyExtractor={(item) => item.id}
         renderItem={({ item: { id, title, multiplier, image }, item }) => (
-          <TouchableOpacity style={tw`flex-row justify-between items-center px-10`}>
+          <TouchableOpacity
+            onPress={() => setSelected(item)}
+            style={tw`flex-row justify-between items-center px-10`}>
             <Image
               style={{
                 width: 100,
@@ -72,4 +76,4 @@ const RideOptionsCard = () => {
 
 export default RideOptionsCard;
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({});.
