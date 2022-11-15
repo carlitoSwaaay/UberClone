@@ -68,9 +68,15 @@ const RideOptionsCard = () => {
             <Text style={tw`text-xl`}>$99</Text>
 
           </TouchableOpacity>
+
         )}
 
       />
+      <View>
+        <TouchableOpacity>
+          <Text>Choose {selected?.title}</Text>
+        </TouchableOpacity>
+      </View>
     </SafeAreaView>
   );
 };
