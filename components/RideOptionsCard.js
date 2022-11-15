@@ -51,7 +51,8 @@ const RideOptionsCard = () => {
         renderItem={({ item: { id, title, multiplier, image }, item }) => (
           <TouchableOpacity
             onPress={() => setSelected(item)}
-            style={tw`flex-row justify-between items-center px-10`}>
+            style={tw`flex-row justify-between items-center px-10 ${id === selected?.id && "bg-gray-200"} `}
+          >
             <Image
               style={{
                 width: 100,
@@ -76,4 +77,4 @@ const RideOptionsCard = () => {
 
 export default RideOptionsCard;
 
-const styles = StyleSheet.create({});.
+const styles = StyleSheet.create({});
