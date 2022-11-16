@@ -2,6 +2,9 @@ import { FlatList, StyleSheet, Text, TouchableOpacity, View } from 'react-native
 import React from 'react'
 import { Icon } from 'react-native-elements';
 import tw from 'tailwind-react-native-classnames';
+import { useNavigation } from '@react-navigation/native';
+
+
 
 const data = [
   {
@@ -19,7 +22,9 @@ const data = [
   },
 ];
 
+
 const NavFavorites = () => {
+  const navigation = useNavigation();
 
   return (
     <FlatList
@@ -29,7 +34,10 @@ const NavFavorites = () => {
         <View style={[tw`bg-gray-200`, { height: 0.5 }]} />
       )}
       renderItem={({ item: { location, destination, icon } }) => (
-        <TouchableOpacity style={tw`flex-row items-center p-5`}>
+        <TouchableOpacity
+          onPress={() => navigation.navigate("ProfileScreen")}
+          style={tw`flex-row items-center p-5`}
+        >
           <Icon
             style={tw`mr-4 rounded-full bg-gray-300 p-3`}
             name={icon}
