@@ -16,7 +16,7 @@ const HomeScreen = () => {
   return (
     <SafeAreaView style={tw`bg-white h-full`}>
       <View>
-        <Image style={{ width: 100, height: 100, resizeMode: "contain" }}
+        <Image style={{ width: 120, height: 120, resizeMode: "contain", alignSelf: "flex-end" }}
           source={{
             uri: "https://mma.prnewswire.com/media/1671139/Uber_Logo.jpg?w=400",
           }}
