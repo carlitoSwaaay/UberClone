@@ -24,7 +24,7 @@ const data = [
 
 
 const NavFavorites = () => {
-  const navigation = useNavigation();
+
 
   return (
     <FlatList
@@ -35,7 +35,7 @@ const NavFavorites = () => {
       )}
       renderItem={({ item: { location, destination, icon } }) => (
         <TouchableOpacity
-          onPress={() => navigation.navigate("ProfileScreen")}
+
           style={tw`flex-row items-center p-5`}
         >
           <Icon
