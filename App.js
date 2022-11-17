@@ -10,12 +10,14 @@ import { SafeAreaProvider } from 'react-native-safe-area-context';
 import 'react-native-gesture-handler';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-
+import { createDrawerNavigator } from '@react-navigation/drawer';
+import { Button } from 'react-native-elements';
 
 
 export default function App() {
 
   const Stack = createStackNavigator();
+  const Drawer = createDrawerNavigator();
 
   return (
     <Provider store={store}>
@@ -26,30 +28,32 @@ export default function App() {
             behavior={Platform.OS === "ios" ? "padding" : "height"}
             keyboardVerticalOffset={Platform.OS === "ios" ? -64 : 0}
           >
-          <Stack.Navigator>
-            <Stack.Screen
+            <Drawer.Navigator>
+              {/* <Stack.Navigator> */}
+              <Drawer.Screen
               name="HomeScreen"
               component={HomeScreen}
               options={{
                 headerShown: false
               }}
             />
-            <Stack.Screen
+              <Drawer.Screen
               name="MapScreen"
               component={MapScreen}
               options={{
                 headerShown: false
               }}
             />
-              {/* <Stack.Screen
+              <Drawer.Screen
               name="ProfileScreen"
               component={ProfileScreen}
               options={{
                 headerShown: false
               }}
-            /> */}
+              />
 
-          </Stack.Navigator>
+              {/* </Stack.Navigator> */}
+            </Drawer.Navigator>
           </KeyboardAvoidingView>
         </SafeAreaProvider>
       </NavigationContainer>
