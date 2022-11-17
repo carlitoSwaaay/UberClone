@@ -8,6 +8,7 @@ import { useDispatch } from 'react-redux';
 import { setDestination, setOrigin } from '../slices/navSlice';
 import NavFavorites from '../components/NavFavorites';
 import { Icon } from 'react-native-elements';
+import MenuButton from '../components/MenuButton';
 
 
 
@@ -19,11 +20,7 @@ const HomeScreen = () => {
   return (
     <SafeAreaView style={tw`bg-white h-full`}>
       <View>
-        <TouchableOpacity
-          style={tw`bg-gray-100 absolute top-9 left-8 z-50 p-3 rounded-full shadow-lg`}
-        >
-          <Icon name="menu" />
-        </TouchableOpacity>
+        <MenuButton />
         <Image style={{ width: 120, height: 120, resizeMode: "contain", alignSelf: "flex-end" }}
           source={{
             uri: "https://mma.prnewswire.com/media/1671139/Uber_Logo.jpg?w=400",
