@@ -1,8 +1,10 @@
+import 'react-native-gesture-handler';
 import React from 'react';
 import { KeyboardAvoidingView, Platform } from 'react-native';
 import { Provider } from 'react-redux';
 import HomeScreen from './screens/HomeScreen';
 import MapScreen from './screens/MapScreen';
+import ProfileScreen from './screens/ProfileScreen';
 import { store } from './store';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import 'react-native-gesture-handler';
@@ -39,6 +41,13 @@ export default function App() {
                 headerShown: false
               }}
             />
+              {/* <Stack.Screen
+              name="ProfileScreen"
+              component={ProfileScreen}
+              options={{
+                headerShown: false
+              }}
+            /> */}
 
           </Stack.Navigator>
           </KeyboardAvoidingView>
