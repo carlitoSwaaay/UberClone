@@ -20,6 +20,11 @@ const data = [
 const MenuButton = () => {
   return (
     <View>
+      <TouchableOpacity
+        style={tw`bg-gray-100 absolute top-9 left-8 z-50 p-3 rounded-full shadow-lg`}
+      >
+        <Icon name="menu" />
+      </TouchableOpacity>
       <Text>MenuButton</Text>
     </View>
   )
