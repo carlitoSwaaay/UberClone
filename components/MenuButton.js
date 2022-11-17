@@ -1,34 +1,72 @@
-import { StyleSheet, Text, TouchableOpacity, View } from 'react-native'
-import React from 'react'
-import tw from 'tailwind-react-native-classnames'
-import { Icon } from 'react-native-elements/dist/icons/Icon'
-import { createDrawerNavigator } from '@react-navigation/drawer';
+import * as React from 'react';
+import { View, Text, Button, TouchableOpacity } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import {
+  createDrawerNavigator,
+  DrawerContentScrollView,
+  DrawerItemList,
+  DrawerItem,
+} from '@react-navigation/drawer';
+import { Icon } from 'react-native-elements/dist/icons/Icon';
+import tw from 'tailwind-react-native-classnames';
 
-// const Drawer = createDrawerNavigator();
+function Feed({ navigation }) {
+  return (
 
-// function MyDrawer() {
-//   return (
-//     <Drawer.Navigator>
-//       <Drawer.Screen name="Feed" component={Feed} />
-//       <Drawer.Screen name="Article" component={Article} />
-//     </Drawer.Navigator>
-//   );
-// }
+    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+      <Text>Feed Screen</Text>
+      <Button title="Open drawer" onPress={() => navigation.openDrawer()} />
+      <Button title="Toggle drawer" onPress={() => navigation.toggleDrawer()} />
+    </View>
+  );
+}
+
+function Notifications() {
+  return (
+    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+      <Text>Notifications Screen</Text>
+    </View>
+  );
+}
+
+function CustomDrawerContent(props) {
+  return (
+    <DrawerContentScrollView {...props}>
+      <DrawerItemList {...props} />
+      <DrawerItem
+        label="Close drawer"
+        onPress={() => props.navigation.closeDrawer()}
+      />
+      <DrawerItem
+        label="Toggle drawer"
+        onPress={() => props.navigation.toggleDrawer()}
+      />
+    </DrawerContentScrollView>
+  );
+}
+
+const Drawer = createDrawerNavigator();
+
+function MyDrawer() {
+  return (
+    <Drawer.Navigator
+      useLegacyImplementation
+      drawerContent={(props) => <CustomDrawerContent {...props} />}
+    >
+
+      <Drawer.Screen name="Feed" component={Feed} />
+      <Drawer.Screen name="Notifications" component={Notifications} />
+    </Drawer.Navigator>
+  );
+}
+
+export default function App() {
+  return (
+
+    <MyDrawer />
 
 
 
-// const MenuButton = () => {
-//   return (
-//     <View>
-//       <TouchableOpacity
-//         style={tw`bg-gray-100 absolute top-9 left-8 z-50 p-3 rounded-full shadow-lg`}
-//       >
-//         <Icon name="menu" />
-//       </TouchableOpacity>
-//     </View>
-//   )
-// }
+  );
+}
 
-// export default MenuButton
-
-// const styles = StyleSheet.create({})

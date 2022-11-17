@@ -13,12 +13,14 @@ import MenuButton from '../components/MenuButton';
 
 
 
+
 const HomeScreen = () => {
   const dispach = useDispatch();
 
 
   return (
     <SafeAreaView style={tw`bg-white h-full`}>
+      <MenuButton />
       <View>
         <Image style={{ width: 120, height: 120, resizeMode: "contain", alignSelf: "flex-end" }}
           source={{
