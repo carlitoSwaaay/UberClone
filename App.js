@@ -12,7 +12,8 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import { Icon } from 'react-native-elements';
-
+import tw from 'tailwind-react-native-classnames';
+import MenuButton from './components/MenuButton';
 
 // const MenuButton = () => {
 //   return (
