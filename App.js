@@ -16,7 +16,7 @@ import { Button } from 'react-native-elements';
 
 export default function App() {
 
-  const Stack = createStackNavigator();
+  // const Stack = createStackNavigator();
   const Drawer = createDrawerNavigator();
 
   return (
@@ -30,21 +30,21 @@ export default function App() {
           >
             <Drawer.Navigator>
               {/* <Stack.Navigator> */}
-              <Drawer.Screen
+              <Drawer.Screen //Stack.Screen
               name="HomeScreen"
               component={HomeScreen}
               options={{
                 headerShown: false
               }}
             />
-              <Drawer.Screen
+              <Drawer.Screen //Stack.Screen
               name="MapScreen"
               component={MapScreen}
               options={{
                 headerShown: false
               }}
             />
-              <Drawer.Screen
+              <Drawer.Screen //Stack.Screen
               name="ProfileScreen"
               component={ProfileScreen}
               options={{
