@@ -1,6 +1,6 @@
 import 'react-native-gesture-handler';
 import React from 'react';
-import { KeyboardAvoidingView, Platform, TouchableOpacity, View } from 'react-native';
+import { KeyboardAvoidingView, Platform, StyleSheet, TouchableOpacity, View } from 'react-native';
 import { Provider } from 'react-redux';
 import HomeScreen from './screens/HomeScreen';
 import MapScreen from './screens/MapScreen';
@@ -31,7 +31,7 @@ const Drawer = createDrawerNavigator();
 //   );
 // };
 
-export default function App() {
+function App() {
 
   return (
     <Provider store={store}>
@@ -42,11 +42,10 @@ export default function App() {
             behavior={Platform.OS === "ios" ? "padding" : "height"}
             keyboardVerticalOffset={Platform.OS === "ios" ? -64 : 0}
           >
-
             <Stack.Navigator>
               <Stack.Screen
               name="HomeScreen"
-              component={HomeScreen}
+                component={DrawerRoutes}
               options={{
                 headerShown: false
               }}
@@ -65,7 +64,6 @@ export default function App() {
                 headerShown: false
               }}
               />
-
             </Stack.Navigator>           
           </KeyboardAvoidingView>
         </SafeAreaProvider>
@@ -86,5 +84,9 @@ function DrawerRoutes() {
 
   );
 }
+
+const styles = StyleSheet.create({});
+
+export default App;
 
 
