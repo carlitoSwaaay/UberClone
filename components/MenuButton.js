@@ -1,72 +1,72 @@
-import * as React from 'react';
-import { View, Text, Button, TouchableOpacity } from 'react-native';
-import { NavigationContainer } from '@react-navigation/native';
-import {
-  createDrawerNavigator,
-  DrawerContentScrollView,
-  DrawerItemList,
-  DrawerItem,
-} from '@react-navigation/drawer';
-import { Icon } from 'react-native-elements/dist/icons/Icon';
-import tw from 'tailwind-react-native-classnames';
+// import * as React from 'react';
+// import { View, Text, Button, TouchableOpacity } from 'react-native';
+// import { NavigationContainer } from '@react-navigation/native';
+// import {
+//   createDrawerNavigator,
+//   DrawerContentScrollView,
+//   DrawerItemList,
+//   DrawerItem,
+// } from '@react-navigation/drawer';
+// import { Icon } from 'react-native-elements/dist/icons/Icon';
+// import tw from 'tailwind-react-native-classnames';
 
-function Feed({ navigation }) {
-  return (
+// function Feed({ navigation }) {
+//   return (
 
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Feed Screen</Text>
-      <Button title="Open drawer" onPress={() => navigation.openDrawer()} />
-      <Button title="Toggle drawer" onPress={() => navigation.toggleDrawer()} />
-    </View>
-  );
-}
+//     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+//       <Text>Feed Screen</Text>
+//       <Button title="Open drawer" onPress={() => navigation.openDrawer()} />
+//       <Button title="Toggle drawer" onPress={() => navigation.toggleDrawer()} />
+//     </View>
+//   );
+// }
 
-function Notifications() {
-  return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Notifications Screen</Text>
-    </View>
-  );
-}
+// function Notifications() {
+//   return (
+//     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+//       <Text>Notifications Screen</Text>
+//     </View>
+//   );
+// }
 
-function CustomDrawerContent(props) {
-  return (
-    <DrawerContentScrollView {...props}>
-      <DrawerItemList {...props} />
-      <DrawerItem
-        label="Close drawer"
-        onPress={() => props.navigation.closeDrawer()}
-      />
-      <DrawerItem
-        label="Toggle drawer"
-        onPress={() => props.navigation.toggleDrawer()}
-      />
-    </DrawerContentScrollView>
-  );
-}
+// function CustomDrawerContent(props) {
+//   return (
+//     <DrawerContentScrollView {...props}>
+//       <DrawerItemList {...props} />
+//       <DrawerItem
+//         label="Close drawer"
+//         onPress={() => props.navigation.closeDrawer()}
+//       />
+//       <DrawerItem
+//         label="Toggle drawer"
+//         onPress={() => props.navigation.toggleDrawer()}
+//       />
+//     </DrawerContentScrollView>
+//   );
+// }
 
-const Drawer = createDrawerNavigator();
+// const Drawer = createDrawerNavigator();
 
-function MyDrawer() {
-  return (
-    <Drawer.Navigator
-      useLegacyImplementation
-      drawerContent={(props) => <CustomDrawerContent {...props} />}
-    >
+// function MyDrawer() {
+//   return (
+//     <Drawer.Navigator
+//       useLegacyImplementation
+//       drawerContent={(props) => <CustomDrawerContent {...props} />}
+//     >
 
-      <Drawer.Screen name="Feed" component={Feed} />
-      <Drawer.Screen name="Notifications" component={Notifications} />
-    </Drawer.Navigator>
-  );
-}
+//       <Drawer.Screen name="Feed" component={Feed} />
+//       <Drawer.Screen name="Notifications" component={Notifications} />
+//     </Drawer.Navigator>
+//   );
+// }
 
-export default function App() {
-  return (
+// export default function App() {
+//   return (
 
-    <MyDrawer />
+//     <MyDrawer />
 
 
 
-  );
-}
+//   );
+// }
 
