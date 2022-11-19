@@ -33,7 +33,6 @@ const Drawer = createDrawerNavigator();
 
 export default function App() {
 
-
   return (
     <Provider store={store}>
       <NavigationContainer>
@@ -43,23 +42,23 @@ export default function App() {
             behavior={Platform.OS === "ios" ? "padding" : "height"}
             keyboardVerticalOffset={Platform.OS === "ios" ? -64 : 0}
           >
-            <Drawer.Navigator>
-              {/* <Stack.Navigator> */}
-              <Drawer.Screen //Stack.Screen
+
+            <Stack.Navigator>
+              <Stack.Screen
               name="HomeScreen"
               component={HomeScreen}
               options={{
                 headerShown: false
               }}
             />
-              <Drawer.Screen //Stack.Screen
+              <Stack.Screen
               name="MapScreen"
               component={MapScreen}
               options={{
                 headerShown: false
               }}
             />
-              <Drawer.Screen //Stack.Screen
+              <Stack.Screen
               name="ProfileScreen"
               component={ProfileScreen}
               options={{
@@ -67,12 +66,24 @@ export default function App() {
               }}
               />
 
-              {/* </Stack.Navigator> */}
-            </Drawer.Navigator>
+            </Stack.Navigator>           
           </KeyboardAvoidingView>
         </SafeAreaProvider>
       </NavigationContainer>
     </Provider>
+  );
+}
+
+function DrawerRoutes() {
+  return (
+
+    <Drawer.Navigator initialRouteName="HomeScreen">
+      <Drawer.Screen name="Home" component={HomeScreen} />
+      <Drawer.Screen name="Map" component={MapScreen} />
+      <Drawer.Screen name="Profile" component={ProfileScreen} />
+    </Drawer.Navigator>
+
+
   );
 }
 
