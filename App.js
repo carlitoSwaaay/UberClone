@@ -15,6 +15,10 @@ import { Icon } from 'react-native-elements';
 import tw from 'tailwind-react-native-classnames';
 import MenuButton from './components/MenuButton';
 
+const Stack = createStackNavigator();
+
+const Drawer = createDrawerNavigator();
+
 // const MenuButton = () => {
 //   return (
 //     <View >
@@ -29,8 +33,6 @@ import MenuButton from './components/MenuButton';
 
 export default function App() {
 
-  // const Stack = createStackNavigator();
-  const Drawer = createDrawerNavigator();
 
   return (
     <Provider store={store}>
