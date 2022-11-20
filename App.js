@@ -1,6 +1,6 @@
 import 'react-native-gesture-handler';
 import React from 'react';
-import { KeyboardAvoidingView, Platform, StyleSheet, TouchableOpacity, View } from 'react-native';
+import { Image, KeyboardAvoidingView, Platform, StyleSheet, TouchableOpacity, View } from 'react-native';
 import { Provider } from 'react-redux';
 import HomeScreen from './screens/HomeScreen';
 import MapScreen from './screens/MapScreen';
@@ -11,7 +11,7 @@ import 'react-native-gesture-handler';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { createDrawerNavigator } from '@react-navigation/drawer';
-import { Icon } from 'react-native-elements';
+import { Button, Icon } from 'react-native-elements';
 import tw from 'tailwind-react-native-classnames';
 import MenuButton from './components/MenuButton';
 
@@ -76,7 +76,17 @@ function DrawerRoutes() {
   return (
 
     <Drawer.Navigator initialRouteName="HomeScreen">
-      <Drawer.Screen name="Home" component={HomeScreen} />
+      <Drawer.Screen
+        name="Home"
+        component={HomeScreen}
+        options={{ headerTitle: " " }} >
+        <Image style={{ width: 120, height: 120, resizeMode: "contain", alignSelf: "flex-end" }}
+          source={{
+            uri: "https://mma.prnewswire.com/media/1671139/Uber_Logo.jpg?w=400",
+          }}
+        />
+
+      </Drawer.Screen>
       <Drawer.Screen name="Map" component={MapScreen} />
       <Drawer.Screen name="Profile" component={ProfileScreen} />
     </Drawer.Navigator>
